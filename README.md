@@ -1,3 +1,8 @@
+
+<p align="center">
+  <img src="https://i.ibb.co/zs1zcs3/Video-Frame.png" />
+</p>
+
 # infra-dynamodb-video-frame-pro-status
 
 Este repositório é responsável pela configuração da **Tabela DynamoDB** que armazenará o status de processamento dos vídeos e outras informações relacionadas, como o número de frames extraídos.
