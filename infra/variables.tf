@@ -18,7 +18,7 @@ variable "metadata_table_name" {
   default     = "video_metadata"
 }
 
-######### VARIÁVEIS ##################################################
+######### VARIÁVEIS ###################################################
 variable "environment" {
   description = "Ambiente (prod)"
   type        = string
