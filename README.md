@@ -15,12 +15,12 @@ Este repositório contém a infraestrutura para gerenciar as seguintes tabelas n
 
 1. **Tabela `video_metadata`** (Gerenciamento):
    - Armazena informações gerais sobre os vídeos enviados pelos usuários.
-   - **Partition Key**: `videoId`
-   - **Sort Key**: `username`
+   - **Partition Key**: `video_id`
+   - **Sort Key**: `user_name`
 
 2. **Tabela `video_status`** (Status de Processamento):
    - Armazena o status do processamento de cada vídeo.
-   - **Partition Key**: `videoId`
+   - **Partition Key**: `video_id`
 
 3. **Configurações de Cobrança**:
    - Modo de cobrança **`PROVISIONED`**, aproveitando o Free Tier da AWS.
@@ -56,8 +56,7 @@ infra/
 ## Como Funciona
 
 1. **Tabelas DynamoDB**:
-   - A tabela `video_metadata` armazena detalhes dos vídeos (como `email`, `qtdFrames` e `createdAt`).
-   - A tabela `video_status` mantém o status do processamento (como `status` e `updatedAt`).
+   - A tabela `metadata` armazena detalhes dos vídeos, status e usuario.
 
 2. **Automação com Terraform**:
    - A infraestrutura das tabelas é provisionada automaticamente pelo Terraform, garantindo consistência e segurança.
@@ -75,7 +74,7 @@ Certifique-se de ter as credenciais da AWS configuradas corretamente e o **AWS C
 
 ### 2. Configuração das Tabelas DynamoDB
 
-1. No diretório **`infra-dynamodb`**, configure o arquivo `terraform.tfvars` com os valores necessários, como o nome das tabelas e a região:
+1. No diretório **`infra`**, configure o arquivo `terraform.tfvars` com os valores necessários, como o nome das tabelas e a região:
 
 ```hcl
 aws_region = "us-east-1"
