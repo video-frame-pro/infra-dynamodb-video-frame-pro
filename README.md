@@ -74,7 +74,7 @@ Certifique-se de ter as credenciais da AWS configuradas corretamente e o **AWS C
 
 ### 2. Configuração das Tabelas DynamoDB
 
-1. No diretório **`infra-dynamodb`**, configure o arquivo `terraform.tfvars` com os valores necessários, como o nome das tabelas e a região:
+1. No diretório **`infra`**, configure o arquivo `terraform.tfvars` com os valores necessários, como o nome das tabelas e a região:
 
 ```hcl
 aws_region = "us-east-1"
